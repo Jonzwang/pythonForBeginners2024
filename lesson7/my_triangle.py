@@ -1,4 +1,4 @@
-def triangle_type(a=3, b=4, c=5):
+def triangle_type(a=3, b=4, c:int=5):
     print(f"{a=}, {b=}, {c=}")
     if a == b and b == c and c == a:
         _type = 'Equilateral'
@@ -11,13 +11,13 @@ def triangle_type(a=3, b=4, c=5):
 def triangle_area(a=3, b=4, c=5):
     s = 0.5 * (a + b + c)
     ls = s * (s - a) * (s - b) * (s-c)
-    print(f"{a=}, {b=}, {c=}, {s=}, {ls}")
+    print(f"{a=}, {b=}, {c=}, {s=}, {ls=}")
     area = ls ** .5
-    print(f"The triangle is '{area}'")
+    print(f"The triangle's area is '{area}'")
 
 
 def valid_triangle(a=3, b=4, c=5):
-    return True
+    return a+b>c and b+c>a and c+a>b
 
 
 if __name__ == '__main__':
